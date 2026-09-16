@@ -6,14 +6,12 @@ from typing import Any
 import yaml
 
 from .clarify.tool import ask_user
-from .check_service_status.tool import check_service_status
-from .create_ticket.tool import create_ticket
-from .format_incident_report.tool import format_incident_report
-from .inspect_device.tool import inspect_device
-from .lookup_user.tool import lookup_user
-from .policy.tool import search_company_policy
-from .search_kb.tool import search_kb
-from .search_device_info.tool import search_device_info
+from .search_services.tool import search_services
+from .search_doctors.tool import search_doctors
+from .check_availability.tool import check_availability
+from .book_appointment.tool import book_appointment
+from .cancel_appointment.tool import cancel_appointment
+from .clinic_policy.tool import clinic_policy
 
 
 # These names are part of the fixed evaluation contract. Keep built-in names
@@ -22,14 +20,12 @@ from .search_device_info.tool import search_device_info
 # this registry and tools.yaml, then test it with team-authored cases.
 TOOL_FUNCTIONS = {
     "clarify": ask_user,
-    "search_kb": search_kb,
-    "search_device_info": search_device_info,
-    "check_service_status": check_service_status,
-    "inspect_device": inspect_device,
-    "lookup_user": lookup_user,
-    "format_incident_report": format_incident_report,
-    "policy": search_company_policy,
-    "create_ticket": create_ticket,
+    "search_services": search_services,
+    "search_doctors": search_doctors,
+    "check_availability": check_availability,
+    "book_appointment": book_appointment,
+    "cancel_appointment": cancel_appointment,
+    "clinic_policy": clinic_policy,
 }
 
 
