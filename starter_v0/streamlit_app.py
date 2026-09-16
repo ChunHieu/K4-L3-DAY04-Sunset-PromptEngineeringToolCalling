@@ -7,6 +7,8 @@ from providers import make_provider
 from tools import load_tool_declarations, to_openai_tools
 from chat import run_model_tool_loop
 
+#Dương Hữu Đạt | 2A202602544
+
 ROOT = Path(__file__).parent
 ARTIFACTS_DIR = ROOT / "artifacts"
 load_lab_env(ROOT)
